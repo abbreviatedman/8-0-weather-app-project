@@ -1,0 +1,44 @@
+* {
+  box-shadow: border-box;
+  margin-top: 10px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  height: 700px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  background: #258080;
+  color: white;
+  grid-column: span 2;
+  margin-top: 10px;
+}
+
+span {
+  font-weight: bold;
+}
+
+.display {
+}
+
+.current {
+  border: 1px solid #258080;
+  background: lightgrey;
+  padding: 30px;
+}
+
+.three-day {
+  display: flex;
+  justify-content: space-around;
+}
+
+.history {
+  padding-top: 10px;
+  grid-row: 1 span 2;
+}

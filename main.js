@@ -66,7 +66,7 @@ const search = (city) => {
           makeThreeDaySection("Day After Tomorrow", dayAfterTomorrow)
         );
 
-      if (!previousSearches.some((search) => search.city === city)) {
+      if (!previousSearches.some((search) => search === city)) {
         const historyItem = document.createElement("li");
         const link = document.createElement("a");
         link.href = "#history";
@@ -74,10 +74,8 @@ const search = (city) => {
         const text = document.createTextNode(` - ${temperature}°F`);
         historyItem.append(link, text);
         document.querySelector(".history ul").append(historyItem);
-        previousSearches.push({ city, temperature });
-        link.addEventListener("click", () => {
-          search(city);
-        });
+        previousSearches.push(city);
+        link.addEventListener("click", () => search(city));
       }
     })
     .catch((error) => console.log);

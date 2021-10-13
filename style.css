@@ -42,3 +42,9 @@ span {
   padding-top: 10px;
   grid-row: 1 span 2;
 }
+
+@media (max-width: 1200px) {
+  .three-day {
+    flex-direction: column;
+  }
+}
